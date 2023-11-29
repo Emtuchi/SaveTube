@@ -74,7 +74,8 @@ def InstagramDownload():
             if not filename.startswith(name):
                 continue
             if filename.endswith('.jpg') or filename.endswith('.mp4'):
-                shutil.move(filename, os.path.join(folder_name, filename))
+                abs_file_path = os.path.abspath(filename)
+                shutil.move(abs_file_path, os.path.join(abs_folder_path, filename))
 
     profile_download(username)
     return render_template("SuccessPage.html")
