@@ -8,14 +8,18 @@
 </head>
 
 <body>
-    <div style="color: blueviolet;">
-        <form action="{{ url_for('downloads')}}" method="post">
-            <h2>Youtube video downloader</h2>
-            <h3>url link</h3>
-            <input id="first" name="URL" type="url">
-            <br><br><button id="sub", type="submit">Download video</button>
-            <br>
+    <div>
+        <form action="{{ url_for('get_options')}}" method="post">
+            <label for="dropdown">choose an option:</label>
+            <select id="dropdown" name="select_options">
+                <option value="nothing"></option>
+                <option value="Youtube">Youtube</option>
+                <option value="Instagram">Instagram</option>
+                <option value="X">X</option>
+            </select>
+            <button type="submit">Submit</button>
         </form>
     </div>
+    
 </body>
 </html>
