@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/insta-background.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.instagram-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+.url-input {
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px; 
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s; 
+}
+
+.url-input:focus {
+    outline: none;
+    border-color: blueviolet; 
+}
+
+button {
+    background-color: #4285f4;
+    color: white;
+    padding: 15px 25px; 
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+/* Rest of the styles remain the same */
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+    .instagram-form {
+        width: 100%;
+        padding: 20px;
+    }
+}

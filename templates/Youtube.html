@@ -3,19 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="views" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="styles/YouTube.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
-    <div style="color: blueviolet;">
-        <form action="{{ url_for('YoutubeDownload')}}" method="post">
-            <h2>Youtube video downloader</h2>
-            <h3>url link</h3>
-            <input id="first" name="URL" type="url">
-            <br><br><button id="sub", type="submit">Download video</button>
-            <br>
+    <div class="container">
+        <form action="{{ url_for('YoutubeDownload')}}" method="post" class="youtube-form">
+            <h2 class="form-heading">YouTube Video Downloader</h2>
+            <h3 class="input-heading">Enter Video URL</h3>
+            <input name="URL" type="url" class="url-input">
+            <button type="submit" class="download-button">Download Video</button>
         </form>
     </div>
 </body>
+
 </html>

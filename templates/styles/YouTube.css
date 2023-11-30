@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/youtube-background.jpeg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.youtube-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.form-heading {
+    color: blueviolet;
+    margin-bottom: 20px;
+}
+
+.input-heading {
+    margin-bottom: 10px;
+}
+
+.url-input {
+    padding: 12px;
+    width: calc(100% - 24px); /* Adjusted width to leave space for the borders */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Added margin to create space below the input */
+}
+
+.download-button {
+    background-color: blueviolet;
+    color: white;
+    padding: 12px 24px;
+    width: 95%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: darkviolet;
+}
