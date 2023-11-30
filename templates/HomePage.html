@@ -3,23 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="views" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/Homepage.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
-    <div>
-        <form action="{{ url_for('get_options')}}" method="post">
-            <label for="dropdown">choose an option:</label>
-            <select id="dropdown" name="select_options">
+    <header class="header">
+        <h1>Welcome to the SaveTube!</h1>
+    </header>
+
+    <div class="container">
+        <form action="{{ url_for('get_options')}}" method="post" class="form">
+            <label for="dropdown">Choose an option:</label>
+            <select id="dropdown" name="select_options" class="select-dropdown">
                 <option value="nothing"></option>
                 <option value="Youtube">Youtube</option>
                 <option value="Instagram">Instagram</option>
                 <option value="X">X</option>
             </select>
-            <button type="submit">Submit</button>
+            <button type="submit" class="submit-button">Submit</button>
         </form>
     </div>
-    
+
+    <footer class="footer">
+        <p>&copy; 2023 Downloader. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
