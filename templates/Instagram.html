@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Downloader</title>
-    <link rel="stylesheet" href="styles/Instagram.css"> <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="static/styles/Instagram.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
     <div class="container">
         <form action="{{ url_for('InstagramDownload')}}" method="post" class="instagram-form">
             <h2 class="form-heading">Instagram Downloader</h2>
-            <h3 class="input-heading">Input URL</h3>
-            <input name="URL" type="url" class="url-input">
-            <br><br><button type="submit" class="download-button">Download Profile</button>
+            <h3 class="input-heading">Input post URL</h3>
+            <input name="URL" type="url" class="url-input"><br>
+            <label for="username">username to scrape from</label>
+            <input name="username" type="text">
+            <br><br><button type="submit" class="download-button">Download Post</button>
             <br>
         </form>
     </div>

@@ -9,9 +9,9 @@
 
 <body>
     <div style="color: blueviolet;">
-        <form action="/options/Instagram" method="post">
-            <h2>X downloader</h2>
-            <h3>Input url</h3>
+        <form action="{{ url_for('Source_download')}}" method="post">
+            <h2>SourceCode downloader</h2>
+            <h3>Input WebPage url</h3>
             <input name="URL" type="url">
             <br><br><button id="sub", type="submit">Download Data</button>
             <br>

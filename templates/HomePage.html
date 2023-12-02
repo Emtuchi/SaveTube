@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="styles/Homepage.css"> <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="static/styles/Homepage.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
     <header class="header">
         <h1>Welcome to the SaveTube!</h1>
+        <form action="{{ url_for('LandingPage')}}" methods="post">
+            <button type="submit">About</button>
+        </form>
     </header>
 
     <div class="container">
@@ -20,7 +23,8 @@
                 <option value="nothing"></option>
                 <option value="Youtube">Youtube</option>
                 <option value="Instagram">Instagram</option>
-                <option value="X">X</option>
+                <option value="Google_Drive">Google_Drive</option>
+                <option value="WebPage">WebPage</option>
             </select>
             <button type="submit" class="submit-button">Submit</button>
         </form>
