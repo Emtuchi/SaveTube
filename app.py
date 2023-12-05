@@ -6,6 +6,7 @@ import os
 import instaloader
 import urllib.parse
 import shutil
+from test import is_valid_url, is_valid_username
 
 app = Flask(__name__)
 @app.route('/', methods=['GET'])
@@ -33,24 +34,16 @@ def get_options():
     elif selected_option == 'Google_Drive':
         return render_template("GoogleDrive.html")
     elif selected_option == 'nothing':
-        return render_template("nothing.html")
+        return render_template("LandingPage.html")
     
 @app.route("/input/youtube", methods=['POST'])
 def YoutubeDownload():
     # Handles youtube video downloads
-    video_url= request.form['URL']
-    def download_vid(url):
-        try:
-            video=YouTube(url)
-            stream=video.streams.get_highest_resolution()
-            stream.download()
-            return True
-        except Exception as error:
-            return str(error)
-    
-    Success = download_vid(video_url)
-    if Success:
-        # Organizes downloaded files into a folder
+    url= request.form['URL']
+    if is_valid_url(url):
+        video=YouTube(url)
+        stream=video.streams.get_highest_resolution()
+        stream.download()
         folder_name = 'Youtube_Downloads'
         abs_folder_path = os.path.abspath(folder_name)
         os.makedirs(abs_folder_path, exist_ok=True)
@@ -60,42 +53,31 @@ def YoutubeDownload():
                 shutil.move(abs_file_path, os.path.join(abs_folder_path, filename))
         return render_template("SuccessPage.html")
     else:
-        return render_template("ErrorPage.html", Error=Success)
+        return render_template("ErrorPage.html", Error="not a valid url")
 
 @app.route("/input/Instagram", methods=['POST'])
 def InstagramDownload():
     # handles instagram downloads
-    def post_download(name, url):
-        try:
-            Ig = instaloader.Instaloader()
-            post_shortcode = url.split("/")[-2]
-            post = instaloader.Post.from_shortcode(Ig.context, post_shortcode)
-            abs_folder_path = os.path.abspath(name)
-            os.makedirs(abs_folder_path, exist_ok=True)
-            Ig.download_post(post, abs_folder_path)
-        except instaloader.exceptions.InstaloaderException as e:
-            return str(e)
-        
-                
     url = request.form['URL']
     username = request.form['username']
-    
-    error_message = None
-    error_message = post_download(username, url)
-
-    if error_message:
-        return render_template("ErrorPage.html", Error=error_message)
-    else:
+    if is_valid_url(url) and is_valid_username(username):
+        Ig = instaloader.Instaloader()
+        post_shortcode = url.split("/")[-2]
+        post = instaloader.Post.from_shortcode(Ig.context, post_shortcode)
+        abs_folder_path = os.path.abspath(username)
+        os.makedirs(abs_folder_path, exist_ok=True)
+        Ig.download_post(post, abs_folder_path)
         return render_template("SuccessPage.html")
+    else:
+        return render_template("ErrorPage.html", Error="incorrect username or url")
     
-
 
 @app.route("/input/SourceCode", methods=['POST'])
 def Source_download():
     # handles downloading source code of a webpage
-    try:
+    url = request.form['URL']
+    if is_valid_url(url):
         current_directory = os.getcwd()
-        url = request.form['URL']
         
         name = urllib.parse.urlparse(url)
         domain = name.netloc.split('.')
@@ -112,8 +94,8 @@ def Source_download():
             threaded=False,
             )
         return render_template("SuccessPage.html")
-    except Exception as e:
-        return render_template("ErrorPage.html", Error=str(e))
+    else:
+        return render_template("ErrorPage.html", Error="not a valid url")
     
 @app.route("/input/GdriveDownload", methods=['POST'])
 def gdrive_download():
@@ -121,24 +103,18 @@ def gdrive_download():
     option = request.form['options']
     url = request.form['URL']
 
-    if option == 'download_file':
-        try:
-            file_id = url.split('/')[-2]
-            new_url = f'https://drive.google.com/uc?/export=download&id={file_id}'
-            gdown.download(new_url)
-            return render_template("SuccessPage.html")
-        except Exception as e:
-            return render_template("ErrorPage.html", Error=e)        
-    elif option == 'download_folder':
-        try:
-            if url.endswith('?usp=sharing'):
-                url = url[:-len('?usp=sharing')]
+    if option == 'download_file' and is_valid_url(url):
+        file_id = url.split('/')[-2]
+        new_url = f'https://drive.google.com/uc?/export=download&id={file_id}'
+        gdown.download(new_url)
+        return render_template("SuccessPage.html")
+    elif option == 'download_folder' and is_valid_url(url):
+        if url.endswith('?usp=sharing'):
+            url = url[:-len('?usp=sharing')]
             gdown.download_folder(url)
             return render_template("SuccessPage.html")
-        except Exception as e:
-            return render_template("ErrorPage.html", Error=e)
-    elif option == 'nothing':
-        return render_template("nothing.html")
+    else:
+        return render_template("ErrorPage.html", Error="not a valid url")
 
 
 if __name__ == "__main__":
