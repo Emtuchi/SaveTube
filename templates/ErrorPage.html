@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Error Page</title>
-    <link rel="stylesheet" href="static/styles/ErrorPage.css"> <!-- Link to the external CSS file -->
-</head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/ErrorPage.css') }}"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="error-container">
-        <h2 class="error-heading">Error occurred while downloading</h2>
-        <p class="error-message">There was an issue while attempting to download the content. Please try again later.</p>
-        <p>Reason:</p>
-        <p>{{ Error }}</p>
+      <h2 class="error-heading">Error occurred while downloading</h2>
+      <p class="error-message">
+        There was an issue while attempting to download the content. Please try
+        again later.
+      </p>
+      <p>Reason:</p>
+      <p>{{ Error }}</p>
     </div>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.landing-page {
+  font-family: Ariel;
+  font-size: 30px;
+  font-weight: bold;
+  width: 400px;
+
+  line-height: 50px;
+}
+
+.mission-state {
+  font-family: Ariel;
+  font-size: 20px;
+  color: rgb(96, 96, 96);
+}
+.reviews {
+  font-family: Ariel;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.checked {
+  color: orange;
+}
+
+.reviewers {
+  font-size: 18px;
+  font-weight: bold;
+}
+.comments {
+  font-family: Ariel;
+  font-size: 15px;
+  color: rgb(96, 96, 96);
+}
+.download-button {
+  background-color: rgb(2, 137, 255);
+  color: white;
+  border: none;
+  height: 36px;
+  width: 100px;
+  border-radius: 18px;
+  transition: opacity 0.15s;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  box-shadow: 6px 6px 6px red;
+  opacity: 0.8;
+}
+
+.download-button:active {
+  background-color: blue;
+}
+.landing {
+  width: 300px;
+  display: block;
+}

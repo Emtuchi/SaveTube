@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/LandingPage.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="views" content="width=device-width, initial-scale=1.0" />
+    <title>
+      SaveTube | Unlock Limitless Entertainment and Transform Your Offline
+      Experience Effortlessly
+    </title>
+  </head>
+  <body>
+    <img
+      class="landing"
+      src="{{ url_for('static', filename='images/Landing.png') }}"
+      alt="download image"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="views" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <p class="landing-page">
+      Unlock Limitless Entertainment and Transform Your Offline Experience
+      Effortlessly
+    </p>
 
-<body>
-    <p>Landing Page........</p>
-</body>
+    <p class="mission-state">
+      Revolutionizing Your Viewing Experience: Download, Save, and Enjoy
+      Uninterrupted Videos
+    </p>
+
+    <p class="reviews">Reviews</p>
+
+    <p class="reviewers">Nomalanga Ndlovu</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <p class="comments">
+      Very useful in students' life for study and entertainment. A good platform
+      for developing skills.
+    </p>
+
+    <p class="reviewers">Nopah Zhemu</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <p class="comments">
+      Wonderful and highly functional app. Helps in work, learning, and
+      performing tasks efficiently.
+    </p>
+
+    <p class="reviewers">Beauty Reneilwe</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <p class="comments">
+      Great experience with SaveTube. Love the video uploading feature. Popular
+      for video sharing and downloading.
+    </p>
+
+    <button class="download-button">Start Downloading</button>
+    <a href="http://localhost:5000/">SaveTube</a>
+  </body>
+</html>

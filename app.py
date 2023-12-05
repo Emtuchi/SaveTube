@@ -14,7 +14,7 @@ def HomePage():
     # renders the home page
     return render_template('HomePage.html')
 
-@app.route('/HomePage/about/LandingPage')
+@app.route('/HomePage/About/LandingPage')
 def LandingPage():
     # renders the landing page
     return render_template('LandingPage.html')
