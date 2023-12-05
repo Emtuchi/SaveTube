@@ -114,7 +114,7 @@ def gdrive_download():
             gdown.download_folder(url)
             return render_template("SuccessPage.html")
     else:
-        return render_template("ErrorPage.html", Error="not a valid url")
+        return render_template("ErrorPage.html", Error="not a valid url for option")
 
 
 if __name__ == "__main__":

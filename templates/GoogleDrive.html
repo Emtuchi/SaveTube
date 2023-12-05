@@ -11,12 +11,13 @@
 
     <div class="container">
         <form action="{{ url_for('gdrive_download')}}" method="post">
-            <label for="dropdown">Choose an option:</label>
+            <label for="drop">Choose an option:</label>
             <select id="drop" name="options">
                 <option value="nothing"></option>
                 <option value="download_file">download_file</option>
                 <option value="download_folder">download_folder</option>
-            </select>
+            </select> <br><br>
+            <label for="URL">input url</label>
             <input name="URL" type="url">
             <button type="submit">Submit</button>
         </form>
