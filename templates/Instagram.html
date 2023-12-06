@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram Downloader</title>
-    <link rel="stylesheet" href="static/styles/Instagram.css"> <!-- Link to the external CSS file -->
-</head>
+    <link rel="stylesheet" href="static/styles/Instagram.css" />
+    <!-- Link to the external CSS file -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <form action="{{ url_for('InstagramDownload')}}" method="post" class="instagram-form">
-            <h2 class="form-heading">Instagram Downloader</h2>
-            <h3 class="input-heading">Input post URL</h3>
-            <input name="URL" type="url" class="url-input"><br>
-            <label for="username">username to scrape from</label>
-            <input name="username" type="text">
-            <br><br><button type="submit" class="download-button">Download Post</button>
-            <br>
-        </form>
+      <form
+        action="{{ url_for('InstagramDownload')}}"
+        method="post"
+        class="instagram-form"
+      >
+        <h2 class="form-heading">Instagram Downloader</h2>
+        <h3 class="input-heading">Input post URL</h3>
+        <input name="URL" type="url" class="url-input" /><br />
+        <label for="username">username to scrape from</label>
+        <input name="username" type="text" />
+        <br /><br /><button type="submit" class="download-button">
+          Download Post
+        </button>
+        <br />
+      </form>
     </div>
-</body>
-
+  </body>
 </html>

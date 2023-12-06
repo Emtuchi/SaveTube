@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link rel="stylesheet" href="static/styles/Homepage.css"> <!-- Link to the external CSS file -->
-</head>
+    <link rel="stylesheet" href="static/styles/Homepage.css" />
+    <!-- Link to the external CSS file -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <h1>Welcome to the SaveTube!</h1>
-        <form action="{{ url_for('LandingPage')}}" methods="post">
-            <button type="submit">About</button>
-        </form>
+      <h1>Welcome to the SaveTube!</h1>
+      <form action="{{ url_for('LandingPage')}}" methods="post">
+        <button type="submit">About</button>
+      </form>
     </header>
 
     <div class="container">
-        <form action="{{ url_for('get_options')}}" method="post" class="form">
-            <label for="dropdown">Choose an option:</label>
-            <select id="dropdown" name="select_options" class="select-dropdown">
-                <option value="nothing"></option>
-                <option value="Youtube">Youtube</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Google_Drive">Google_Drive</option>
-                <option value="WebPage">WebPage</option>
-            </select>
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
+      <form action="{{ url_for('get_options')}}" method="post" class="form">
+        <label for="dropdown">Choose an option:</label>
+        <select id="dropdown" name="select_options" class="select-dropdown">
+          <option value="nothing"></option>
+          <option value="Youtube">Youtube</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Google_Drive">Google_Drive</option>
+          <option value="WebPage">WebPage</option>
+        </select>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2023 Downloader. All rights reserved.</p>
+      <p>&copy; 2023 Downloader. All rights reserved.</p>
     </footer>
-</body>
-
+  </body>
 </html>
