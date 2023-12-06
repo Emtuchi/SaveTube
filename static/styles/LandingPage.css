@@ -4,6 +4,9 @@ body {
   padding: 0;
   background-size: cover;
   background-position: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
 .landing-page {
@@ -11,13 +14,14 @@ body {
   font-size: 30px;
   font-weight: bold;
   width: 400px;
-
+  flex: 1;
+  margin-right: 20px;
   line-height: 50px;
 }
 
 .mission-state {
   font-family: Ariel;
-  font-size: 20px;
+  font-size: 35px;
   color: rgb(96, 96, 96);
 }
 .reviews {
@@ -25,6 +29,7 @@ body {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 10px;
+  margin-left: 20px;
 }
 .checked {
   color: orange;
@@ -33,11 +38,13 @@ body {
 .reviewers {
   font-size: 18px;
   font-weight: bold;
+  margin-left: 20px;
 }
 .comments {
   font-family: Ariel;
   font-size: 15px;
   color: rgb(96, 96, 96);
+  margin-left: 20px;
 }
 .download-button {
   background-color: rgb(2, 137, 255);
@@ -59,7 +66,51 @@ body {
 .download-button:active {
   background-color: blue;
 }
-.landing {
-  width: 300px;
+
+.how-to {
+  max-width: 100%;
   display: block;
+  height: auto;
+  margin-left: 150px;
+  margin-top: 60px;
+}
+.landing {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  float: right;
+  margin-left: 0;
+  margin-right: 150px;
+}
+.content {
+  display: flex;
+  align-items: center;
+}
+.header {
+  font-family: Arial;
+  font-size: 40px;
+  text-align: center; /* Horizontally centers the text */
+  display: flex;
+  justify-content: center; /* Aligns content horizontally at the center */
+  align-items: center; /* Aligns content vertically at the center */
+  height: 100px;
+  transform: rotate(-10deg);
+  background-color: #847d7d; /* Add a background color */
+  border-radius: 19px; /* Add rounded corners to the header */
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1); /* Set the height of the header (adjust as needed) */
+}
+
+footer {
+  /* Add styles for the footer as needed */
+  text-align: center; /* Centers the text in the footer */
+  padding: 20px; /* Adds some padding around the footer content */
+}
+.partners-list {
+  /* Add styles for the partner logos list */
+  list-style: none; /* Removes default list styles */
+}
+
+.partners-list li {
+  display: inline-block; /* Displays the partner logos horizontally */
+  margin: 0 10px; /* Adjusts the space between partner logos */
 }

@@ -22,21 +22,31 @@
     </title>
   </head>
   <body>
-    <img
-      class="landing"
-      src="{{ url_for('static', filename='images/Landing.png') }}"
-      alt="download image"
-    />
-
-    <p class="landing-page">
-      Unlock Limitless Entertainment and Transform Your Offline Experience
-      Effortlessly
-    </p>
+    <header>
+      <h1 class="header">No Limits. No Wait. Download Videos in a Snap</h1>
+    </header>
+    <div class="content">
+      <p class="landing-page">
+        Unlock Limitless Entertainment and Transform Your Offline Experience
+        Effortlessly
+      </p>
+      <img
+        class="landing"
+        src="{{ url_for('static', filename='images/Landing.png') }}"
+        alt="download image"
+      />
+    </div>
 
     <p class="mission-state">
       Revolutionizing Your Viewing Experience: Download, Save, and Enjoy
       Uninterrupted Videos
     </p>
+
+    <img
+      class="how-to"
+      src="{{ url_for('static', filename='images/how-to.png') }}"
+      alt="download image"
+    />
 
     <p class="reviews">Reviews</p>
 
@@ -72,8 +82,69 @@
       Great experience with SaveTube. Love the video uploading feature. Popular
       for video sharing and downloading.
     </p>
-
+    <p>
+      Features of SaveTube downloader <strong>High-Quality Results</strong> The results offered
+      by this video saver are of high quality. With this utility, you can get
+      your hands on the same quality video that you have watched over the web.
+      The video quality won’t be disturbed by our free SaveTube downloader. <strong>No
+      Installation Required</strong> To download video, SmallSEOTools is entirely an
+      online tool that doesn’t need to be installed on your device. All you need
+      to have for downloading videos through this video downloader is a stable
+      internet connection. <strong>Quick & Easy to Use</strong> The users don’t have to follow
+      any convoluted procedure for using this free online video downloader. Its
+      user-friendly interface allows everyone to save their desired video
+      content from any website over the web. In addition, the smart and advanced
+      algorithms working in the backend of this tool ensure to provide the users
+      with super-quick results. With this video saver, you can save your
+      favourite short clips, educational content, dramas, songs, or any other
+      type of video in a matter of seconds. <strong>No Watermarks</strong> Unlike many other HD
+      video downloaders available over the web, this SaveTube downloader
+      provides you with high-quality videos without any watermark. The videos
+      downloaded through this HD video downloader contain no watermarks of
+      SmallSEOTools or any other third-party website. <strong>Uncompromised Quality</strong>
+      Experience top-tier quality with our SaveTube downloader. You get the same
+      pristine video quality as streamed online, ensuring a seamless viewing
+      experience without any degradation. Rest assured, your videos retain their
+      excellence when downloaded using our free online tool. <strong>Zero Installation
+      Hassle</strong> Say goodbye to downloads and installations! Our video downloader
+      operates entirely online, eliminating the need for device installations. A
+      stable internet connection is all that's required to effortlessly grab
+      your favorite videos. <strong>Effortless & Swift</strong> Simplicity is at the core of our
+      downloader. No intricate processes to follow – our user-friendly interface
+      makes video downloads a breeze from any website. Thanks to our
+      cutting-edge backend algorithms, lightning-fast results are guaranteed. Be
+      it short clips, educational content, dramas, or music videos – you can
+      download them in seconds. <strong>Watermark-Free Downloads</strong> Enjoy your downloaded
+      videos without any unwanted watermarks. Unlike other downloaders, ours
+      provides high-quality videos without tagging them with SmallSEOTools or
+      any third-party branding. Elevate your video downloading experience with
+      our tool, ensuring unparalleled quality, ease, and speed without any
+      unnecessary additions. Discover the freedom of seamless video downloading
+      today
+    </p>
+    
     <button class="download-button">Start Downloading</button>
     <a href="http://localhost:5000/">SaveTube</a>
+    <footer>
+      <p>&copy; 2023 SaveTube. All rights reserved.</p>
+      <ul class="partners-list"
+        <p>OUR PARTNERS</p>
+        <li>
+          <a href="https://www.youtube.com"
+            ><img src="{{ url_for('static', filename='images/ytub.ico') }}" alt="YouTube Logo">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com"
+            ><img src="{{ url_for('static', filename='images/insta.ico') }}" alt="Instagram logo">
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com"
+            ><img src="{{ url_for('static', filename='images/twit.ico') }}" alt="Twitter Logo">
+          </a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
