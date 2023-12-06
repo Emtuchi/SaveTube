@@ -16,13 +16,18 @@
   </head>
 
   <body>
+    <img
+      class="error-pic"
+      src="{{ url_for('static', filename='images/errorpage.png') }}"
+      alt="download image"
+    />
     <div class="error-container">
-      <h2 class="error-heading">Error occurred while downloading</h2>
-      <p class="error-message">
-        There was an issue while attempting to download the content. Please try
-        again later.
-      </p>
-      <p>Reason:</p>
+      <h2 class="error-heading">
+        In a forgiving mood, let them keep their jobs
+        <a href="http://localhost:5000/">Home</a>
+      </h2>
+      <p class="error-message"></p>
+      <p>Confirm the URL for accuracy and retry the download.</p>
       <p>{{ Error }}</p>
     </div>
   </body>
