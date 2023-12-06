@@ -89,28 +89,26 @@ body {
 .header {
   font-family: Arial;
   font-size: 40px;
-  text-align: center; /* Horizontally centers the text */
+  text-align: center;
   display: flex;
-  justify-content: center; /* Aligns content horizontally at the center */
-  align-items: center; /* Aligns content vertically at the center */
+  justify-content: center;
+  align-items: center;
   height: 100px;
   transform: rotate(-10deg);
-  background-color: #847d7d; /* Add a background color */
-  border-radius: 19px; /* Add rounded corners to the header */
-  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1); /* Set the height of the header (adjust as needed) */
+  background-color: #847d7d;
+  border-radius: 19px;
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-  /* Add styles for the footer as needed */
-  text-align: center; /* Centers the text in the footer */
-  padding: 20px; /* Adds some padding around the footer content */
+  text-align: center;
+  padding: 20px;
 }
 .partners-list {
-  /* Add styles for the partner logos list */
-  list-style: none; /* Removes default list styles */
+  list-style: none;
 }
 
 .partners-list li {
-  display: inline-block; /* Displays the partner logos horizontally */
-  margin: 0 10px; /* Adjusts the space between partner logos */
+  display: inline-block;
+  margin: 0 10px;
 }
