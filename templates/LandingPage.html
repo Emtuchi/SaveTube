@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='styles/LandingPage.css') }}"
@@ -23,12 +25,15 @@
   </head>
   <body>
     <header>
-      <h1 class="header">No Limits. No Wait. Download Videos in a Snap</h1>
+      <h1 class="header">SaveTube. No Limits. No Wait</h1>
     </header>
     <div class="content">
       <p class="landing-page">
         Unlock Limitless Entertainment and Transform Your Offline Experience
         Effortlessly
+        <a href="https://github.com/Emtuchi/SaveTube" target="_blank">
+          <button class="home-page">SaveTube</button>
+        </a>
       </p>
       <img
         class="landing"
@@ -82,66 +87,114 @@
       Great experience with SaveTube. Love the video uploading feature. Popular
       for video sharing and downloading.
     </p>
-    <p>
-      Features of SaveTube downloader <strong>High-Quality Results</strong> The results offered
-      by this video saver are of high quality. With this utility, you can get
-      your hands on the same quality video that you have watched over the web.
-      The video quality won’t be disturbed by our free SaveTube downloader. <strong>No
-      Installation Required</strong> To download video, SmallSEOTools is entirely an
-      online tool that doesn’t need to be installed on your device. All you need
-      to have for downloading videos through this video downloader is a stable
-      internet connection. <strong>Quick & Easy to Use</strong> The users don’t have to follow
-      any convoluted procedure for using this free online video downloader. Its
-      user-friendly interface allows everyone to save their desired video
-      content from any website over the web. In addition, the smart and advanced
-      algorithms working in the backend of this tool ensure to provide the users
-      with super-quick results. With this video saver, you can save your
-      favourite short clips, educational content, dramas, songs, or any other
-      type of video in a matter of seconds. <strong>No Watermarks</strong> Unlike many other HD
-      video downloaders available over the web, this SaveTube downloader
-      provides you with high-quality videos without any watermark. The videos
-      downloaded through this HD video downloader contain no watermarks of
-      SmallSEOTools or any other third-party website. <strong>Uncompromised Quality</strong>
-      Experience top-tier quality with our SaveTube downloader. You get the same
-      pristine video quality as streamed online, ensuring a seamless viewing
-      experience without any degradation. Rest assured, your videos retain their
-      excellence when downloaded using our free online tool. <strong>Zero Installation
-      Hassle</strong> Say goodbye to downloads and installations! Our video downloader
-      operates entirely online, eliminating the need for device installations. A
-      stable internet connection is all that's required to effortlessly grab
-      your favorite videos. <strong>Effortless & Swift</strong> Simplicity is at the core of our
-      downloader. No intricate processes to follow – our user-friendly interface
-      makes video downloads a breeze from any website. Thanks to our
-      cutting-edge backend algorithms, lightning-fast results are guaranteed. Be
-      it short clips, educational content, dramas, or music videos – you can
-      download them in seconds. <strong>Watermark-Free Downloads</strong> Enjoy your downloaded
-      videos without any unwanted watermarks. Unlike other downloaders, ours
-      provides high-quality videos without tagging them with SmallSEOTools or
-      any third-party branding. Elevate your video downloading experience with
-      our tool, ensuring unparalleled quality, ease, and speed without any
-      unnecessary additions. Discover the freedom of seamless video downloading
-      today
-    </p>
+    <section class="key-features">
+      <div class="feature">
+        <h2 class="feature1head">High-Quality Results</h2>
+
+        <img
+          class="feature1"
+          src="{{ url_for('static', filename='videos/high-quality.gif') }}"
+          alt="High-quality GIF"
+        />
+        <p class="feature1paragragh">
+          The results offered by this video saver are of high quality. With
+          this utility, you can get your hands on the same quality video that
+          you have watched over the web. The video quality won’t be disturbed
+          by our free SaveTube downloader. 
+        </p>
+      </div>
+
+      <div class="feature">
+        <h2 class="feature1head">No Installation Required</h2>
+        <img
+        class="feature1"
+        src="{{ url_for('static', filename='videos/installation.gif') }}"
+        alt="High-quality GIF"
+      />
+        <p class="feature1paragragh">
+          To download video, SmallSEOTools is entirely an online tool that
+          doesn’t need to be installed on your device. All you need to have
+          for downloading videos through this video downloader is a stable
+          internet connection.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h2 class="feature1head">Quick & Easy to Use</h2>
+        <p class="quickneasy">
+          The users don’t have to follow any convoluted procedure for using
+          this free online video downloader. Its user-friendly interface
+          allows everyone to save their desired video content from any website
+          over the web.
+        </p>
+      </div>
+      <section class="about-section">
+        <h2>About</h2>
+        <p>
+          <strong>This project is more than a mere academic requirement; it's a shared venture that encapsulates dedication, expertise, and a collective passion for innovation and technology. Collaborating alongside my colleagues at Holberton School, this endeavor was inspired by the desire to create a transformative video/file downloader that redefines user experiences.
+          Our project journey began with recognizing the ever-evolving digital landscape, where media consumption forms an integral part of modern life. Witnessing the increasing need for a seamless, high-quality video/file downloading experience sparked the inception of our endeavor. We constantly needed to watch online, which was interrupted by disrupting adverts, hence the inspiration for a reliable downloader.
+          The project's core inspiration lies in the collective quest for crafting an intuitive, efficient, and user-centric solution. Our collaborative effort was fueled by a shared vision—to create a video/file downloader that not only met academic standards but also resonated with real-world demands.
+          Embracing our diverse skills and perspectives, we embarked on a journey to develop a downloader that prioritizes user convenience without compromising on quality. It was more than just coding; it was about architecting a solution that simplifies how users access and enjoy their favorite videos and files seamlessly.
+          This Portfolio Project isn't solely the culmination of individual learnings but a testament to our combined commitment to harness technology for enhancing user experiences. Each line of code, every innovative feature, and all the collaborative discussions echo the dedication and shared vision defining this endeavor.
+          Our Holberton School journey has culminated in this project—a collaborative effort that stands as a testament to our commitment to innovation and technological excellence. 
+        </p>
+      </section>
+      <section class="holberton-section">
+        <h2>Holberton Portfolio Project</h2>
+        <p>This project is part of the Holberton School Portfolio Project.Holberton School is a Computer Science school founded in Silicon Valley to address the gap in the education system for aspiring software engineers.</p>
+        <a href="https://www.holbertonschool.com" target="_blank">Holberton Portfolio Project</a>
+      </section>
+      <section class="team-members">
+        <h2>Team Members</h2>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/teammember1" target="_blank">Jealous Matsikachando - LinkedIn</a>
+            <a href="https://github.com/teammember1" target="_blank">GitHub</a>
+            <a href="https://twitter.com/teammember1" target="_blank">Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/teammember2" target="_blank">Gorge Emetu- LinkedIn</a>
+            <a href="https://github.com/teammember2" target="_blank">GitHub</a>
+            <a href="https://twitter.com/teammember2" target="_blank">Twitter</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/teammember2" target="_blank">Cyprian - LinkedIn</a>
+            <a href="https://github.com/teammember2" target="_blank">GitHub</a>
+            <a href="https://twitter.com/teammember2" target="_blank">Twitter</a>
+          </li>
+        </ul>
+      </section>
     
-    <button class="download-button">Start Downloading</button>
-    <a href="http://localhost:5000/">SaveTube</a>
+      <section class="github-link">
+        <h2>Project Repository</h2>
+        <a href="https://github.com/Emtuchi/SaveTube" target="_blank">GitHub Repository</a>
+      </section>
     <footer>
       <p>&copy; 2023 SaveTube. All rights reserved.</p>
-      <ul class="partners-list"
-        <p>OUR PARTNERS</p>
+      <ul class="partners-list">
+        <li></li>
         <li>
           <a href="https://www.youtube.com"
-            ><img src="{{ url_for('static', filename='images/ytub.ico') }}" alt="YouTube Logo">
+            ><img
+              src="{{ url_for('static', filename='images/ytub.ico') }}"
+              alt="YouTube Logo"
+            />
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com"
-            ><img src="{{ url_for('static', filename='images/insta.ico') }}" alt="Instagram logo">
+            ><img
+              src="{{ url_for('static', filename='images/insta.ico') }}"
+              alt="Instagram logo"
+            />
           </a>
         </li>
         <li>
           <a href="https://twitter.com"
-            ><img src="{{ url_for('static', filename='images/twit.ico') }}" alt="Twitter Logo">
+            ><img
+              src="{{ url_for('static', filename='images/twit.ico') }}"
+              alt="Twitter Logo"
+            />
           </a>
         </li>
       </ul>
