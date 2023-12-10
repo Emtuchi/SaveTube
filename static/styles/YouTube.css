@@ -38,11 +38,11 @@ body {
 
 .url-input {
   padding: 12px;
-  width: calc(100% - 24px); /* Adjusted width to leave space for the borders */
+  width: calc(100% - 24px);
   border-radius: 8px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  margin-bottom: 15px; /* Added margin to create space below the input */
+  margin-bottom: 15px;
 }
 
 .download-button {
