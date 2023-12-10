@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Source Code Downloader</title>
+    <link rel="stylesheet" href="static/styles/SourceCode.css" />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+      type="image/x-icon"
+    />
+  </head>
+    <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header_logo">
+          <a href="/">
+            <img src="/static/images/sourceC.gif" />
+          </a>
+        </div>
+        <main class="content">
+          <div class="container">
+            <h1 class="content_title">Paste WebPage URL here</h1>
+            <section class="form">
+              <form
+                action="{{ url_for('Source_download')}}"
+                method="post"
+              >
+              
+              <input name="URL" type="url">
+              <br><br><button id="sub", type="submit">Download Data</button>
+              </form>
+              <div class="download-info">
+               
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <div class="header_right">
+          <ul class="header_nav">
+            <li>
+              <a href="http://localhost:5000/HomePage/About/LandingPage?"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="//www.instagram.com">Instagram</a>
+            </li>
+            <li>
+              <a href="//www.youtube.com">YouTube</a>
+            </li>
+            <li>
+              <a href="//drive.google.com/drive">Google drive</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="home-description">
+      <div class="header-item">
+        <p class="header-item-text">
+            "Every day, numerous developers contribute their code, making valuable software and resources available for wider use. However, not all websites or platforms permit the free download of source code. Some websites have specific terms and conditions regarding the use, modification, and distribution of their source code.
+        </p>
+        <h2 class="how-to-download">Below is a guide on how to download Any Source Code</h2>
+        <p class="download-instructions">
+            1. Enter the URL of the webpage you want to download the source code from.<br>
+            2. Once you've entered the URL, click the 'Download Data' button to start the process.<br>
+            3. After the download is complete, you can access the downloaded source code from your local machine.<br>
+  
+        </p>
+        <p class="permissions">
+            NOTE: MAKE SURE YOU HAVE <a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service">PERMISIONS</a> TO DOWNLOAD THE SOURCE CODE OF THE WEBPAGE YOU ARE ACCESSING.<br>
+            <br>
+            To determine the permissions related to downloading source code from a website, you typically need to refer to the website's terms of service, terms and conditions, or any licensing information provided by the website owner.<br>
+            <br>
+            Here are a few methods you can use:<br>
+            <br>
+            1. <strong>Website's Terms of Service (ToS):</strong> Check the website's official Terms of Service or Terms and Conditions. This documentation often includes information about the permitted use of the website's content, including whether downloading source code is allowed and under what conditions.<br>
+            <br>
+            2. <strong>Robots.txt File:</strong> Websites may specify crawling permissions and restrictions in their <code>robots.txt</code> file, which is a text file that communicates with web crawlers and specifies which parts of the site should not be accessed by them. However, note that <code>robots.txt</code> files mainly focus on search engine crawlers rather than human users.<br>
+            <br>
+            3. <strong>Licensing Information:</strong> Some websites might have specific licensing information for their content or source code. They might use licenses like GPL, MIT, Apache, etc., which outline the permissions and limitations for using, modifying, and distributing their source code.<br>
+            <br>
+            4. <strong>Contacting Website Owner/Administrator:</strong> If you're unsure about the permissions or licensing for downloading source code from a particular website, it might be best to directly contact the website owner or administrator to seek permission or clarification.<br>
+            <br>
+            5. <strong>Legal Advice:</strong> For complex or uncertain cases, consulting a legal professional might be necessary to ensure compliance with copyright laws and terms of use.<br>
+            <br>
+            Remember, respecting the intellectual property rights and permissions of website content is crucial. Always ensure that you have the necessary permissions before downloading or using source code from any website.
+        </p>
+    </div>
+    <footer>
+      <p>&copy; 2023 SaveTube. All rights reserved.</p>
+  </footer>
+  
+  </body>
+</html>

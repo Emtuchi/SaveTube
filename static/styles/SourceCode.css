@@ -1,0 +1,191 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: 500px;
+  background-position: right;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 0px;
+  padding-top: 0;
+  margin-top: 0;
+  flex-direction: column;
+}
+
+.youtube-form {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.form-heading {
+  color: blueviolet;
+  margin-bottom: 20px;
+}
+
+.input-heading {
+  margin-bottom: 10px;
+}
+
+.url-input {
+  padding: 12px;
+  width: calc(100% - 24px);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.download-button {
+  background-color: blueviolet;
+  color: white;
+  padding: 12px 24px;
+  width: 95%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: darkviolet;
+  box-shadow: 6px 6px 6px red;
+}
+.download-button:active {
+  background-color: blue;
+}
+.header {
+  padding-top: 40px;
+  margin-bottom: 50px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(160, 65, 65);
+}
+.header_logo {
+  font-size: 0;
+}
+.header_right {
+  display: flex;
+  align-items: center;
+}
+
+.header_right .header_nav {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.header_right .header_nav li {
+  margin-right: 15px;
+}
+
+.header_right .header_nav li:last-child {
+  padding-left: 10px;
+}
+.content_title {
+  font-size: 40px;
+  line-height: 1;
+  color: #867777;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.input-heading,
+.url-input,
+.download-button {
+  margin-top: 15px;
+}
+.content {
+  margin-top: 20px;
+}
+.download-info img {
+  margin-top: 0;
+  width: 500px;
+}
+.download_info-text {
+  color: #973434;
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+.header-item-text {
+  font-size: 15px;
+  color: #999;
+  line-height: 28px;
+  text-align: center;
+  margin-top: 50px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+.how-to-download {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #867777;
+  padding-top: 50px;
+}
+.download-instructions {
+  font-size: 15px;
+  color: #999;
+  text-align: center;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+  background-color: #202020;
+  color: #867777;
+}
+.permissions {
+  color: #a93535;
+  font-size: 10px;
+  text-align: center;
+  display: block;
+}
+input[name="URL"] {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #757070;
+  border-radius: 13px;
+  margin-bottom: 15px;
+}
+button[type="submit"] {
+  background-color: blueviolet;
+  color: white;
+  padding: 12px 24px;
+  width: 100%;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button[type="submit"]:hover {
+  box-shadow: 6px 6px 6px red;
+  opacity: 0.8;
+}
+.form {
+  box-shadow: none;
+}
+
+.form select,
+.form input,
+.form button {
+  box-shadow: none;
+}
