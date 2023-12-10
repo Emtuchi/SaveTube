@@ -81,6 +81,7 @@ body {
   float: right;
   margin-left: 0;
   margin-right: 150px;
+  border-radius: 10px;
 }
 .content {
   display: flex;
