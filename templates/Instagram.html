@@ -19,12 +19,12 @@
       <div class="header-container">
         <div class="header_logo">
           <a href="/">
-           
+            <img src="/static/images/insta2.gif" />
           </a>
         </div>
         <main class="content">
           <div class="container">
-            <h1 class="content_title">Paste ONLY YouTube URL here</h1>
+            <h1 class="content_title">Paste ONLY Instagram URL here</h1>
             <section class="form">
               <form
                 action="{{ url_for('InstagramDownload')}}"
@@ -32,9 +32,9 @@
                 class="youtube-form"
               >
               <input name="URL" type="url" class="url-input" /><br />
-              <label for="username">username to scrape from</label>
+              <label for="username">Username to scrape from</label>
               <input name="username" type="text" />
-              <br /><br /><button type="submit" class="download-button">
+              <br /><br /><button type="submit" class="download-button">Download</button>
               </form>
               
             </section>
@@ -70,17 +70,18 @@
           feature that allows free downloads of videos or music from its
           platform. BUT with <a href="http://localhost:5000/">SaveTube</a>  you can download highest quality videos for free"
         </p>
-        <h2 class="how-to-download">Below is a guide on how to download videos from YouTube</h2>
+        <h2 class="how-to-download">Below is a guide on how to download videos from Instagram</h2>
         <p class="download-instructions">
-            1. Open the YouTube.com website and select the video you want to save.<br>
-            2. Start the video and wait for it to begin playing.<br>
-            3. Copy the video's address from the browser's address bar.<br>
-            4. Paste the copied link into the search bar on our website.<br>
-            5. Choose the desired quality and format.<br>
-            6. Select the location to save the file.<br>
-            7. Click the Download button.  <br>  
-            
-            After download you view the saved video from your local machine in your Downloads folder
+          <p class="download-instructions">
+            1. Access Instagram website/app and log in to your account.<br>
+            2. Navigate to the Profile, Search for or visit the profile from which you want to download content.<br>
+            3. Click on the profile and copy the URL from the browser's address bar.<br>
+            4. Go to the first input field on our website specifically meant for URL input. Paste the copied profile URL into this space.<br>
+            5. In the provided text field labeled "username to scrape from," type or input the username of the profile you wish to scrape content from.<br>
+            6. Click on the "Download" button to start the download process.<br>
+            After download, you can access the downloaded profile content from your local machine in the download folder.
+        </p>
+        
         </p>
     </div>
     <footer>
