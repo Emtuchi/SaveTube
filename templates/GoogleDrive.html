@@ -2,29 +2,91 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GDrive Downloader</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="static/styles/GoogleDrive.css" />
     <link
       rel="icon"
       href="{{ url_for('static', filename='images/favicon.ico') }}"
       type="image/x-icon"
     />
   </head>
+    <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header_logo">
+          <a href="/">
+            <img src="/static/images/google.gif" />
+          </a>
+        </div>
+        <main class="content">
+          <div class="container">
+            <h1 class="content_title">Paste ONLY YouTube URL here</h1>
+            <section class="form">
+              <form
+                action="{{ url_for('gdrive_download')}}"
+                method="post"
+                class="youtube-form"
+              >
+              <label for="drop">Choose an option:</label>
+              <select id="drop" name="options">
+                <option value="nothing"></option>
+                <option value="download_file">download_file</option>
+                <option value="download_folder">download_folder</option>
+              </select>
+              <br /><br />
+              <label for="URL">URL</label>
+              <input name="URL" type="url" /><br>
+              <button type="submit">Submit</button>
+              </form>
+            </section>
+          </div>
+        </main>
 
-  <body>
-    <div class="container">
-      <form action="{{ url_for('gdrive_download')}}" method="post">
-        <label for="drop">Choose an option:</label>
-        <select id="drop" name="options">
-          <option value="nothing"></option>
-          <option value="download_file">download_file</option>
-          <option value="download_folder">download_folder</option>
-        </select>
-        <br /><br />
-        <label for="URL">input url</label>
-        <input name="URL" type="url" />
-        <button type="submit">Submit</button>
-      </form>
+        <div class="header_right">
+          <ul class="header_nav">
+            <li>
+              <a href="http://localhost:5000/HomePage/About/LandingPage?"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="//www.instagram.com">Instagram</a>
+            </li>
+            <li>
+              <a href="//www.youtube.com">YouTube</a>
+            </li>
+            <li>
+              <a href="//drive.google.com/drive">Google drive</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="home-description">
+      <div class="header-item">
+        <p class="header-item-text">
+          "Our Google Drive Downloader tool enables the hassle-free retrieval of files and folders stored on Google Drive. Simply provide the file or folder URL and choose the appropriate download option. Whether it's a single file or an entire folder, our tool simplifies the process of downloading your desired content from Google Drive <a href="http://localhost:5000/">SaveTube</a>"
+        </p>
+        <h2 class="how-to-download">Below is a guide on how to download videos from YouTube</h2>
+        <p class="download-instructions">
+          Below is a step-by-step guide on how to download files or folders from Google Drive:<br><br>
+          1. Navigate to the Google Drive website or app and log in to your account.<br>
+          2. Find the file or folder you wish to download within your Google Drive.<br>
+          3. Click on the file or folder and copy the URL from the browser's address bar.<br>
+          4. Paste the copied URL into the input field provided on our website for Google Drive downloads.<br>
+          5. Select the appropriate download option based on your requirement—whether it's downloading a single file or an entire folder.<br>
+          6. Click on the "Submit" or "Download" button to start the download process.<br>
+
+        </p>
+        
     </div>
+    <footer>
+      <p>&copy; 2023 SaveTube. All rights reserved.</p>
+  </footer>
+  
   </body>
 </html>
