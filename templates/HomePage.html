@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <link rel="stylesheet" href="static/styles/Homepage.css" />
-    <!-- Link to the external CSS file -->
     <link
       rel="icon"
       href="{{ url_for('static', filename='images/favicon.ico') }}"
@@ -15,28 +14,60 @@
 
   <body>
     <header class="header">
-      <h1>Welcome to the SaveTube!</h1>
-      <form action="{{ url_for('LandingPage')}}" methods="post">
-        <button type="submit">About</button>
-      </form>
+      <div class="About-Help-Contact">
+        <form action="{{ url_for('LandingPage')}}" methods="post">
+          <h1 class="logo">SaveTube.net</h1>
+          <button type="submit">About</button>
+          <a href="Installation" class="installation-link">Installation</a>
+          <a href="Installation" class="installation-link">Language</a>
+          <a href="Installation" class="installation-link">Help</a>
+        </form>
+      </div>
     </header>
-
-    <div class="container">
-      <form action="{{ url_for('get_options')}}" method="post" class="form">
-        <label for="dropdown">Choose an option:</label>
-        <select id="dropdown" name="select_options" class="select-dropdown">
-          <option value="nothing"></option>
-          <option value="Youtube">Youtube</option>
-          <option value="Instagram">Instagram</option>
-          <option value="Google_Drive">Google_Drive</option>
-          <option value="WebPage">WebPage</option>
-        </select>
-        <button type="submit" class="submit-button">Submit</button>
-      </form>
+    <div id="main" class="main-block">
+      <div class="container">
+        <form action="{{ url_for('get_options')}}" method="post" class="form">
+          <label for="dropdown" class="option-label"
+            >Choose Download Category</label
+          >
+          <div class="flex-container">
+            <select id="dropdown" name="select_options" class="select-dropdown">
+              <option value="" disabled selected hidden>
+                Select an option
+              </option>
+              <option value="Youtube">Youtube</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Google_Drive">Google_Drive</option>
+              <option value="WebPage">WebPage</option>
+            </select>
+            <button type="submit" class="submit-button">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
-
+    <div class="line"></div>
+    <div class="how_to_download">
+      <a href="http://localhost:5000/HomePage/About/LandingPage" class="how_to"
+        >How to download</a
+      >
+    </div>
+    <div class="below-form-paragragh">
+      <p class="avg">Scanned by AVG</p>
+    </div>
+    <div class="download-options">
+      <p>
+        SaveTube | Unlock Limitless Entertainment and Transform Your Offline
+        Experience Effortlessly
+      </p>
+    </div>
+    <div></div>
     <footer class="footer">
       <p>&copy; 2023 Downloader. All rights reserved.</p>
+      <p>
+        YouTube YouTube to mp4 YouTube Shorts Facebook SoundCloud Vimeo
+        Instagram IG stories Instagram reels Instagram viewer VK Twitter TikTok
+        APP Reddit Threads APK FAQ Install For webmasters
+      </p>
     </footer>
   </body>
 </html>

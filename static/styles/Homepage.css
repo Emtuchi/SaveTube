@@ -2,24 +2,17 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("../images/background_image.png");
   background-size: cover;
   background-position: center;
-}
-
-.header {
-  background-color: #111050;
-  color: #fff;
-  text-align: center;
-  margin-top: auto;
-  padding: 3px 0;
+  background-color: whitesmoke;
 }
 
 .container {
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  max-width: 300px;
+  padding: 20px;
+  margin: auto;
 }
 
 .form {
@@ -44,24 +37,164 @@ body {
 .submit-button {
   background-color: #4285f4;
   color: white;
-  padding: 15px 25px;
+  padding: 18px 22px;
   border: none;
   border-radius: 8px;
   width: 100%;
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: 16px;
+  padding-top: 20px;
+}
+.submit-button:hover {
+  background-color: rgb(38, 76, 165);
+  box-shadow: 6px 6px 6px red;
 }
 .footer {
   background-color: #111050;
   color: #fff;
   text-align: center;
   padding: 3px 0;
+  margin-top: 100px;
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 600px) {
-  .form {
-    width: 100%; /* Take full width on smaller screens */
-  }
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  font-size: 34px;
+  padding-right: 110px;
+}
+
+.About-Help-Contact {
+  margin-top: 10px;
+}
+
+.About-Help-Contact form {
+  display: flex;
+  justify-content: center;
+}
+
+.About-Help-Contact form button[type="submit"],
+.About-Help-Contact form a.installation-link {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.About-Help-Contact form button[type="submit"] {
+  background-color: #4285f4;
+  color: rgb(13, 13, 14);
+  border-radius: 8px;
+}
+.About-Help-Contact form button[type="submit"]:hover {
+  background-color: rgb(38, 76, 165);
+  box-shadow: 6px 6px 6px red;
+}
+
+.About-Help-Contact form a.installation-link {
+  color: rgb(26, 25, 25);
+}
+.About-Help-Contact form a.installation-link:hover {
+  color: rgb(105, 141, 227);
+}
+.option-label {
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+  display: inline;
+  white-space: nowrap;
+}
+.form {
+  background-color: whitesmoke;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.header {
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 0px 0;
+  color: #4285f4;
+  box-shadow: none;
+  margin-top: 30px;
+}
+
+.main-block {
+  margin-top: 0;
+  padding: 0px 0;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0px;
+}
+.select-dropdown {
+  flex-grow: 1;
+  margin-right: 8px;
+  width: auto;
+  border-width: 6px;
+  border-color: #4285f4;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+.line {
+  border-bottom: 3px solid #0b8638;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 4px rgba(137, 6, 6, 0.3);
+}
+.avg {
+  color: #0b8638;
+  position: relative;
+}
+.below-form-paragragh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avg::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/static/images/avg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 5px;
+}
+.how_to_download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+
+a.how_to {
+  color: #0b8638;
+  position: relative;
+}
+.download-options {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
